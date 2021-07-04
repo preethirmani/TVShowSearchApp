@@ -25,7 +25,7 @@ export class SearchComponent implements OnInit {
     
 }
 
-clickHandler() {
+
 
 }
-}
+
