@@ -1,0 +1,66 @@
+
+<div class="row details-container">
+  <div class="col-sm-4">
+    <div class="card" >
+    <img class="card-img img-fluid" style="height: 28rem;" [src]='current.img' alt=""/>
+    </div>
+  </div>
+
+  <div class="col-sm-8">
+    <div class="card text-white content">
+      <div class="card-body">
+        <h1 class="card-title">{{current.title}}</h1>
+
+        
+        <p class="card-text" [innerHTML] = current.summary></p>
+        <div class="cast-details">
+          <label>Starring:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <span>{{current.cast1}}, {{current.cast2}}, {{current.cast3}}</span>
+        </div>
+       
+        <div class="cast-details">
+          <label>Genre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <span>{{current.genre}}</span>
+        </div>
+
+
+        <div class="cast-details">
+          <label>Language:&nbsp;</label>
+          <span>{{current.language}}</span>
+        </div>
+
+        <div class="cast-details">
+          <label>Premeried:&nbsp;</label>
+          <span>{{current.premiered | date: 'mediumDate'}}</span>
+        </div>
+
+          <div class="cast-details">
+            <label>Rating:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <span>{{current.rating}}</span>
+          </div>
+       
+      </div>
+      <ng-container *ngIf='current.seasons.length > 0'>  
+      <div class="dropdown-box form-group">
+        <form>
+      <select name="Seasons" id="seasonsbox" class="seasonsbox" (change) = 'seasonHandler($event)'>
+        <option>Seasons</option>
+        <option  *ngFor="let season of current.seasons" 
+        [value]="season.id" > Season{{season.number}} </option>
+      
+      </select>
+
+
+    </form>
+    </div>
+  </ng-container>
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+
+ 

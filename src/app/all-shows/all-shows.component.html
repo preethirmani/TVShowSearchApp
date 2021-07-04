@@ -1,0 +1,99 @@
+<div class="slick-container" *ngIf="current">
+
+  <div>
+    <p>Top Rated</p>
+    <p></p>
+  </div>
+<ngx-slick-carousel class="carousel" 
+#slickModal="slick-carousel" [config]="slideConfig"  arrows = true>
+    <ng-container   *ngFor="let cur of current" >
+      <div ngxSlickItem  class="card shadow" *ngIf='cur.rating > 8'>
+        <a [routerLink]="['/search',cur.id] ">
+      <img   [src] = 'cur.img' class= "card-img img-fluid"></a>
+
+      </div>
+    </ng-container>
+  </ngx-slick-carousel>
+
+
+  <div >
+    <p>New Releases</p>
+    <p></p>
+  </div>
+<ngx-slick-carousel class="carousel" 
+#slickModal="slick-carousel" [config]="slideConfig"  arrows = true>
+    <ng-container   *ngFor="let cur of current" >
+      <div ngxSlickItem  class="card" *ngIf='cur.date > 2013'>
+        <a [routerLink]="['/search',cur.id] ">
+      <img   [src] = 'cur.img' class= "card-img img-fluid">
+      </a>
+
+      </div>
+    </ng-container>
+  </ngx-slick-carousel>
+
+  <div>
+    <p>Comedy</p>
+  </div>
+
+<ngx-slick-carousel class="carousel" 
+  #slickModal="slick-carousel" [config]="slideConfig">
+ 
+  <ng-container   *ngFor="let cur of current" >
+      <div ngxSlickItem class="card" *ngIf='cur.genres.includes("Comedy")'>
+    <a [routerLink]="['/search',cur.id] ">
+    <img class= "card-img img-fluid" [src] = 'cur.img' ></a>
+    </div>
+  </ng-container>
+</ngx-slick-carousel>
+
+  <div>
+    <p>Family</p>
+    <p></p>
+  </div>
+<ngx-slick-carousel class="carousel" 
+#slickModal="slick-carousel" [config]="slideConfig"  arrows = true>
+    <ng-container   *ngFor="let cur of current" >
+      <div ngxSlickItem  class="card" *ngIf='cur.genres.includes("Family")'>
+        <a [routerLink]="['/search',cur.id] ">
+      <img   [src] = 'cur.img' class= "card-img img-fluid"></a>
+
+      </div>
+    </ng-container>
+  </ngx-slick-carousel>
+ 
+
+
+      <div>
+        <p>Adventure</p>
+      </div>
+
+      <ngx-slick-carousel class="carousel" 
+      #slickModal="slick-carousel" [config]="slideConfig">
+      <ng-container   *ngFor="let cur of current" >
+    
+        <div ngxSlickItem class="card" *ngIf='cur.genres.includes("Adventure")'>
+        <a [routerLink]="['/search',cur.id] ">
+        <img class= "card-img img-fluid" [src] ='cur.img'></a>
+        </div>
+      </ng-container>
+    </ngx-slick-carousel>
+
+    <div>
+      <p>Romance</p>
+    </div>
+  
+   <ngx-slick-carousel class="carousel" 
+    #slickModal="slick-carousel" [config]="slideConfig">
+    <ng-container   *ngFor="let cur of current" >
+      <div ngxSlickItem class="card" *ngIf='cur.genres.includes("Romance")'>
+
+      <a [routerLink]="['/search',cur.id] ">
+      <img class= "card-img img-fluid" [src] = 'cur.img' ></a>
+      </div>
+    </ng-container>
+  </ngx-slick-carousel>
+
+</div>
+
+

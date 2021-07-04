@@ -1,0 +1,32 @@
+
+   
+<ng-container class="episode-container" *ngIf="iEpisode.length > 0">
+    <h1>Season: {{seasonNum}}</h1>
+  <div *ngFor="let episode of iEpisode">  
+    <div class="container-fluid episode-box">
+      <div class="row">
+          <div class="col-12 mt-3 border-0">
+              <div class="card border-0 ">
+                  <div class="card-horizontal">
+                      <div class="img-square-wrapper">
+                          <img class='' [src]="episode.img" alt="Card image cap">
+                      </div>
+                      <div class="card-body">
+                          <div>
+                            <h2 class="card-title">Episode{{episode.number}}. {{episode.name}}</h2>
+                            <div class="detail-box"> 
+                            <p class="card-text" [innerHTML]= "episode.summary"></p>
+                        </div>
+                          <div class="wrapper-detail time-detail">
+                            <span class="time-detail">{{episode.date | date:"longDate"}}    </span>
+                            <span class="time-detail">{{episode.time}}min</span>
+                        </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</ng-container>

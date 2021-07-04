@@ -1,0 +1,44 @@
+.episode-container {
+  margin-top: 40px;
+  background-color: #131b21;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.card-body  {
+  background-color:#131b21;
+  color:white;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+
+  margin-top:40px;
+  text-align: center;
+}
+
+.img-square-wrapper {
+  background-color:#131b21;
+  text-align: center;
+}
+
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.card {
+  background-blend-mode: lighten;
+}
+
+.episode-box{
+  margin: 0;
+}
+
+.time-detail{
+  margin: 5px;
+  float: right;
+  display: block; 
+
+}
+

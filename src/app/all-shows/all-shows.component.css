@@ -1,0 +1,23 @@
+.slick-container{
+  margin-top:40px;
+}
+
+p {
+  font-size: 16px;
+  padding-top: 4px;
+  margin-bottom:10px;
+  margin-top:10px;
+  margin-left: 10px;
+}
+
+body .slick-prev, 
+body .slick-next {
+  height: 45px;
+  width: 40px;
+}
+.slick-slider {
+  margin: auto;
+  padding: 2px;
+  width: 95%;
+  
+}
