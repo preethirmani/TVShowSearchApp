@@ -15,9 +15,26 @@ h1 {
 
 }
 .cast-details{
-font-size: medium;
+font-size: small;
+}
+.cast-label {
+  margin-right: 49px;
+}
+.genre-label {
+  margin-right: 60px;
+}
+.language-label{
+  margin-right: 34px;
+
 }
 
+.date-label {
+  margin-right: 32px;
+}
+
+.rating-label {
+  margin-right: 58px;
+}
 .seasonsbox {
   padding: 10px;
   font-size: 16px;

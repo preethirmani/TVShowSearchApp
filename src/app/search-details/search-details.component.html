@@ -14,28 +14,28 @@
         
         <p class="card-text" [innerHTML] = current.summary></p>
         <div class="cast-details">
-          <label>Starring:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <label class="cast-label">Starring</label>
           <span>{{current.cast1}}, {{current.cast2}}, {{current.cast3}}</span>
         </div>
        
         <div class="cast-details">
-          <label>Genre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <label class='genre-label'>Genre</label>
           <span>{{current.genre}}</span>
         </div>
 
 
         <div class="cast-details">
-          <label>Language:&nbsp;</label>
+          <label class="language-label">Language</label>
           <span>{{current.language}}</span>
         </div>
 
         <div class="cast-details">
-          <label>Premeried:&nbsp;</label>
+          <label class="date-label">Premeried</label>
           <span>{{current.premiered | date: 'mediumDate'}}</span>
         </div>
 
           <div class="cast-details">
-            <label>Rating:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label class="rating-label">Rating</label>
             <span>{{current.rating}}</span>
           </div>
        

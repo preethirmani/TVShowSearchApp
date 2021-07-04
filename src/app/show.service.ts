@@ -22,6 +22,7 @@ export class ShowService {
   }
 
   getSingleShowData(val: any) {
+    console.log("Inside Get Single Show Data")
     let reg = /[0123456789]/
     let url = ''
     if(reg.test(val)) {

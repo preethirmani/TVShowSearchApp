@@ -16,8 +16,8 @@ export class SearchComponent implements OnInit {
   constructor( private router: Router ) { }
 
   ngOnInit(): void {
- //  if(this.router.onSameUrlNavigation)
-    this.search.valueChanges.pipe(debounceTime(1000)).subscribe(searchValue => {
+  
+    this.search.valueChanges.pipe(debounceTime(700)).subscribe(searchValue => {
       if(!this.search.invalid) {
      this.router.navigate(['/search', searchValue])
       }

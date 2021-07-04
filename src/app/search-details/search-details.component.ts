@@ -37,7 +37,7 @@ current: Isearch = {
               private route: Router ) { }
 
   ngOnInit(): void {
-    
+    console.log(this.activatedRoute)
     let v = this.activatedRoute.snapshot.params['id']
     this.showService.getSingleShowData(v).subscribe(data => {
     this.current = data
