@@ -32,6 +32,12 @@ font-size: small;
   margin-right: 32px;
 }
 
+.wrapper-box {
+  border: 2px solid white;
+  margin-top: 40px;
+  padding: 10px;
+}
+
 .rating-label {
   margin-right: 58px;
 }

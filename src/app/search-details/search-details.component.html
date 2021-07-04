@@ -10,35 +10,34 @@
     <div class="card text-white content">
       <div class="card-body">
         <h1 class="card-title">{{current.title}}</h1>
-
-        
         <p class="card-text" [innerHTML] = current.summary></p>
-        <div class="cast-details">
-          <label class="cast-label">Starring</label>
-          <span>{{current.cast1}}, {{current.cast2}}, {{current.cast3}}</span>
-        </div>
-       
-        <div class="cast-details">
-          <label class='genre-label'>Genre</label>
-          <span>{{current.genre}}</span>
-        </div>
+        <div wrapper-box>
+                <div class="cast-details">
+                  <label class="cast-label">Starring</label>
+                  <span>{{current.cast1}} {{current.cast2}} {{current.cast3}}</span>
+                </div>
+              
+                <div class="cast-details">
+                  <label class='genre-label'>Genre</label>
+                  <span>{{current.genre}}</span>
+                </div>
 
 
-        <div class="cast-details">
-          <label class="language-label">Language</label>
-          <span>{{current.language}}</span>
-        </div>
+                <div class="cast-details">
+                  <label class="language-label">Language</label>
+                  <span>{{current.language}}</span>
+                </div>
 
-        <div class="cast-details">
-          <label class="date-label">Premeried</label>
-          <span>{{current.premiered | date: 'mediumDate'}}</span>
-        </div>
+                <div class="cast-details">
+                  <label class="date-label">Premeried</label>
+                  <span>{{current.premiered | date: 'mediumDate'}}</span>
+               </div>
 
-          <div class="cast-details">
-            <label class="rating-label">Rating</label>
-            <span>{{current.rating}}</span>
-          </div>
-       
+              <div class="cast-details">
+                <label class="rating-label">Rating</label>
+                <span>{{current.rating}}</span>
+              </div>
+        </div>
       </div>
       <ng-container *ngIf='current.seasons.length > 0'>  
       <div class="dropdown-box form-group">

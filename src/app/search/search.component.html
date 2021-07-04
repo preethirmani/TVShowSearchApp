@@ -2,7 +2,7 @@
   <span class="logo" routerLink='/'>SHOWMAZE</span>
   <form class="search-form">
    
-    <input matInput class="search-input"  placeholder="Search 100+ TV shows" [formControl]='search'/>
+    <input matInput class="search-input"  placeholder="Search 100+ TV shows" [formControl]='search' (focusout)="clearSearch($event)" />
    
     <mat-hint class="search-hint">Specify show name like New Girl</mat-hint>
     <mat-error class="search-error" *ngIf = "search.invalid">Type more than 3 characters to search</mat-error>

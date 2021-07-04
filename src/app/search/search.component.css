@@ -29,7 +29,8 @@
 .logo {
   margin-left: 10px;
   color: #fff;
-  font-weight: 700;
+  font-size: large;
+  font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   margin-right: 40px;

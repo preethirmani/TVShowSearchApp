@@ -15,6 +15,21 @@
     </ng-container>
   </ngx-slick-carousel>
 
+  <div>
+    <p>Comedy</p>
+  </div>
+
+<ngx-slick-carousel class="carousel" 
+  #slickModal="slick-carousel" [config]="slideConfig">
+ 
+  <ng-container   *ngFor="let cur of current" >
+      <div ngxSlickItem class="card" *ngIf='cur.genres.includes("Comedy")'>
+    <a [routerLink]="['/search',cur.id] ">
+    <img class= "card-img img-fluid" [src] = 'cur.img' ></a>
+    </div>
+  </ng-container>
+</ngx-slick-carousel>
+
 
   <div >
     <p>New Releases</p>
@@ -32,20 +47,7 @@
     </ng-container>
   </ngx-slick-carousel>
 
-  <div>
-    <p>Comedy</p>
-  </div>
-
-<ngx-slick-carousel class="carousel" 
-  #slickModal="slick-carousel" [config]="slideConfig">
  
-  <ng-container   *ngFor="let cur of current" >
-      <div ngxSlickItem class="card" *ngIf='cur.genres.includes("Comedy")'>
-    <a [routerLink]="['/search',cur.id] ">
-    <img class= "card-img img-fluid" [src] = 'cur.img' ></a>
-    </div>
-  </ng-container>
-</ngx-slick-carousel>
 
   <div>
     <p>Family</p>
@@ -62,7 +64,20 @@
     </ng-container>
   </ngx-slick-carousel>
  
+  <div>
+    <p>Action</p>
+  </div>
 
+  <ngx-slick-carousel class="carousel" 
+  #slickModal="slick-carousel" [config]="slideConfig">
+  <ng-container   *ngFor="let cur of current" >
+
+    <div ngxSlickItem class="card" *ngIf='cur.genres.includes("Action")'>
+    <a [routerLink]="['/search',cur.id] ">
+    <img class= "card-img img-fluid" [src] ='cur.img'></a>
+    </div>
+  </ng-container>
+</ngx-slick-carousel>
 
       <div>
         <p>Adventure</p>

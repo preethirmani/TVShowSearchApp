@@ -22,10 +22,11 @@ export class SearchComponent implements OnInit {
      this.router.navigate(['/search', searchValue])
       }
     })
-    
 }
 
-
+clearSearch(event:any) {
+  event.target.value=''
+}
 
 }
 
