@@ -10,7 +10,7 @@ import { debounceTime } from 'rxjs/operators';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  search = new FormControl('', Validators.minLength(3))
+  search = new FormControl(' ', Validators.minLength(3))
   
 
   constructor( private router: Router ) { }
@@ -19,6 +19,8 @@ export class SearchComponent implements OnInit {
   
     this.search.valueChanges.pipe(debounceTime(700)).subscribe(searchValue => {
       if(!this.search.invalid) {
+        // Clearing search input
+        //this.search = '';
      this.router.navigate(['/search', searchValue])
       }
     })
